@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Casa del Silencio — Contacto</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="contacto.js" defer></script>
+</head>
+
+<body>
+  <header id="encabezado">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html" aria-label="Inicio">
+        <span class="logo">👁</span>
+        <span class="titulo-sitio">Casa del Silencio</span>
+      </a>
+      <nav id="navegacion" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="sinopsis.html">Sinopsis</a>
+        <a href="personajes.html">Personajes</a>
+        <a href="galeria.html">Galería</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <main id="principal">
+
+    <section class="seccion contenedor">
+      <h1>Contacto</h1>
+      <p class="lead">¿Comentarios o teorías? Déjalos aquí (formulario de ejemplo, sin backend).</p>
+      <form class="tarjeta formulario" action="#" method="post">
+        <label>Nombre<input type="text" name="nombre" placeholder="Tu nombre"></label>
+        <label>Correo<input type="email" name="correo" placeholder="tu@correo.com"></label>
+        <label>Mensaje<textarea name="mensaje" rows="5"
+            placeholder="¿Qué te ha parecido la película?"></textarea></label>
+        <input type="button" class="boton" id="enviar" value="Enviar">
+      </form>
+    </section>
+
+  </main>
+  <footer id="pie">
+    <div class="contenedor">
+      <p class="creditos">© 2025 Casa del Silencio · Sitio de fans</p>
+    </div>
+  </footer>
+</body>
+
+</html>
