@@ -1,0 +1,258 @@
+:root {
+  --fondo: #0b0b0c;
+  --texto: #f1f1f1;
+  --muted: #a1a1a1;
+  --acento: #e50914;
+  --borde: #262628;
+  --tarjeta: #141416;
+  --sombra: 0 18px 40px rgba(0, 0, 0, .35);
+  --contenedor: 1100px;
+  --radio: 16px;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.6
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+.contenedor {
+  max-width: var(--contenedor);
+  margin: auto;
+  padding: 0 20px
+}
+
+#encabezado {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 10, .7);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--borde);
+  z-index: 10
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px
+}
+
+.marca {
+  display: flex;
+  gap: 10px;
+  align-items: center
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--acento);
+  display: grid;
+  place-items: center;
+  font-weight: 900
+}
+
+.titulo-sitio {
+  font-weight: 800;
+  letter-spacing: .5px
+}
+
+#navegacion {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap
+}
+
+#navegacion a {
+  padding: 8px 12px;
+  border-radius: 10px
+}
+
+#navegacion a:hover {
+  background: var(--tarjeta)
+}
+
+#hero {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 28px;
+  align-items: center;
+  padding: 42px 0
+}
+
+@media (max-width:900px) {
+  #hero {
+    grid-template-columns: 1fr
+  }
+}
+
+#hero .foto {
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  box-shadow: var(--sombra)
+}
+
+.lead {
+  color: var(--muted);
+  margin: 0 0 16px
+}
+
+.boton {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: var(--acento);
+  color: #fff;
+  font-weight: 800;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--borde)
+}
+
+.boton.secundario {
+  background: transparent;
+  border: 1px solid var(--borde)
+}
+
+.seccion {
+  padding: 48px 0
+}
+
+.seccion h2 {
+  margin: 0 0 10px
+}
+
+.rejilla {
+  display: grid;
+  gap: 24px
+}
+
+.rejilla-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr))
+}
+
+@media (max-width:900px) {
+  .rejilla-3 {
+    grid-template-columns: 1fr 1fr
+  }
+}
+
+@media (max-width:640px) {
+  .rejilla-3 {
+    grid-template-columns: 1fr
+  }
+}
+
+.boton {
+  cursor: pointer;
+  /* Esto hace que aparezca la manito */
+}
+
+/* Opcional: estilo para cuando el usuario pasa el mouse */
+.boton:hover {
+  background-color: #1a5fb4;
+  /* Un azul más oscuro */
+  transform: translateY(-2px);
+  /* Efecto de elevación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Sombra más pronunciada */
+}
+
+.tarjeta {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 18px;
+  box-shadow: var(--sombra)
+}
+
+.etiqueta {
+  display: inline-block;
+  background: rgba(229, 9, 20, .12);
+  border: 1px solid rgba(229, 9, 20, .4);
+  color: #ffb3b7;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .85rem
+}
+
+.centrado {
+  text-align: center
+}
+
+.mosaico {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px
+}
+
+@media (max-width:900px) {
+  .mosaico {
+    grid-template-columns: 1fr 1fr
+  }
+}
+
+@media (max-width:640px) {
+  .mosaico {
+    grid-template-columns: 1fr
+  }
+}
+
+.mosaico img {
+  border-radius: 14px;
+  border: 1px solid var(--borde);
+  box-shadow: var(--sombra)
+}
+
+.formulario label {
+  display: block;
+  margin: 12px 0 6px
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid var(--borde);
+  background: #0f0f11;
+  color: var(--texto)
+}
+
+#pie {
+  padding: 36px 0;
+  border-top: 1px solid var(--borde);
+  background: #0f0f11;
+  margin-top: 48px
+}
+
+.creditos {
+  color: var(--muted);
+  text-align: center;
+  font-size: .95rem
+}
